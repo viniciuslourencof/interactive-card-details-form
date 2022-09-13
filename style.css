@@ -7,7 +7,7 @@
 
 main {
     display: flex;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .left {
@@ -29,21 +29,23 @@ main {
 .details {
     display: flex;
     flex-direction: column;
-    width: 40%;    
+    width: 35%;    
 }
 
 .details__label {
     color:  hsl(278, 68%, 11%);
     text-transform: uppercase;
+    font-weight: bold;
     margin-bottom: 0.3rem;
+    
 }
 
 .details__input {
     border: 1px solid hsl(270, 3%, 87%);
     border-radius: 5px;
-    color:  hsl(270, 3%, 87%);
-    padding: 0.5rem;  
+    color: hsl(279, 6%, 55%);
     margin-bottom: 1rem;  
+    padding: 0.5rem;      
 }
 
 .details__info {
@@ -80,4 +82,9 @@ main {
     border-radius: 10px;
     height: 40px;
     width: 100%;
+}
+
+::placeholder { 
+    color: hsl(279, 6%, 55%);
+    opacity: 0.5;
 }
