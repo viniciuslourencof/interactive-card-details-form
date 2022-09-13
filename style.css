@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+    display: flex;
+    font-size: 0.8rem;
+}
+
+.left {
+    background-color: hsl(0, 100%, 66%);
+    background: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    width: 30%;
+    height: 100vh;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100vh;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 40%;    
+}
+
+.details__label {
+    color:  hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.details__input {
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    color:  hsl(270, 3%, 87%);
+    padding: 0.5rem;  
+    margin-bottom: 1rem;  
+}
+
+.details__info {
+    display: flex;    
+}
+
+.details__dateexp {    
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.details__dateexp-inputs{
+    display: flex;
+    flex-direction: row;    
+}
+
+.details__dateexp-inputs input {
+    width: 40%;
+    margin-right: 0.8rem;
+}
+
+.details__cvc {
+    display: flex;
+    flex-direction: column;
+    width: 55%;    
+}
+
+.details__button {
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+}
