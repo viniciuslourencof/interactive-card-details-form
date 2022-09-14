@@ -18,8 +18,7 @@
 <body>
   <main>
 
-    <div class="left">
-    </div>
+    <div class="left"></div>
     
     <div class="cards">
       <div class="card-details">
@@ -30,13 +29,13 @@
 
         <div class="card-details__number">0000 0000 0000 0000</div>
         <div class="card-details__name-dateexp">
-          <div class="card-details__name">Jane Appleseed</div>
+          <div class="card-details__name">Vinicius Lourenço</div>
           <div class="card-details__dateexp">00/00</div>
         </div>
       </div>
 
-      <div class="card-details-verse">        
-        <div class="">000</div>
+      <div class="card-details-back">        
+        <div class="card-details-back__cvc">000</div>
       </div>
     </div>    
 
@@ -45,24 +44,24 @@
       <form class="details" action="" method="post">     
 
         <label class="details__label" for="">Titular do Cartão</label>
-        <input class="details__input" type="text" name="" id="" placeholder="e.g. Jane Appleseed">            
+        <input class="details__input" type="text" name="" id="" placeholder="Vinicius Lourenço">            
     
         <label class="details__label" for="">Número do Cartão</label>
-        <input class="details__input" type="number" name="" id="" placeholder="e.g. 1234 5678 9123 0000">            
+        <input class="details__input" type="text" name="" id="" placeholder="0000 0000 0000 0000" data-inputmask="'mask': '9999 9999 9999 9999'">            
 
         <div class="details__info">
 
           <div class="details__dateexp">         
-            <label class="details__label" for="">Data de Exp. (MM/YY)</label>                                
+            <label class="details__label" for="">Data de Exp. (MM/AA)</label>                                
             <div class="details__dateexp-inputs">                   
               <input class="details__input" type="number" name="" id="" placeholder="MM">
-              <input class="details__input" type="number" name="" id="" placeholder="YY">                           
+              <input class="details__input" type="number" name="" id="" placeholder="AA">                           
             </div>
           </div>
           
           <div class="details__cvc">
             <label class="details__label" for="">CVC</label>                      
-            <input class="details__input" type="number" name="" id="" placeholder="e.g. 123">                                                                               
+            <input class="details__input" type="number" name="" id="" placeholder="000">                                                                               
           </div>
 
         </div>
