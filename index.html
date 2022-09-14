@@ -24,18 +24,25 @@
 
     <div class="right">
 
-      <!-- <div class="card-details">
-        0000 0000 0000 0000
-        Jane Appleseed
-        00/00      
+      <div class="card-details">        
+        <div class="card-details__balls">
+          <div class="card-details__whiteball"></div>          
+          <div class="card-details__emptyball"></div>   
+        </div>        
+
+        <div class="card-details__number">0000 0000 0000 0000</div>      
+        <div class="card-details__name-dateexp">
+          <div class="card-details__name">Jane Appleseed</div>          
+          <div class="card-details__dateexp">00/00</div>
+        </div>  
       </div>
 
       <div class="card-details-verse">
-        000
-      </div> -->
+        <div class="card-details-verse__blackrectangle"></div>
+        <div class="card-details-verse__cvc">000</div>        
+      </div>
       
-
-      <div class="details">        
+      <form class="details" action="" method="post">     
 
         <label class="details__label" for="">Titular do Cartão</label>
         <input class="details__input" type="text" name="" id="" placeholder="e.g. Jane Appleseed">            
@@ -44,6 +51,7 @@
         <input class="details__input" type="number" name="" id="" placeholder="e.g. 1234 5678 9123 0000">            
 
         <div class="details__info">
+
           <div class="details__dateexp">         
             <label class="details__label" for="">Data de Exp. (MM/YY)</label>                                
             <div class="details__dateexp-inputs">                   
@@ -56,11 +64,12 @@
             <label class="details__label" for="">CVC</label>                      
             <input class="details__input" type="number" name="" id="" placeholder="e.g. 123">                                                                               
           </div>
+
         </div>
         
         <button class="details__button">Confirmar</button>
     
-      </div>
+      </form>
     </div>
 
 
