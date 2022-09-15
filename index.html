@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
+  <title>Interactive card details form</title>
+
+  <style>
+    .error-input { border: 1px solid #b1395f; }
+    .error-msg { 
+                color: #c12020;                 
+                margin-bottom: 1rem;
+                margin-top: -12px;
+                font-size: 0.6rem;
+                position: relative;
+               }
+  </style>
+
+
+<script src="index.js"></script>
+
+</head>
+<body>
+  <main>
+
+    <div class="left"></div>
+    
+    <div class="cards">
+      <div class="card-details">
+        <div class="card-details__balls">
+          <div class="card-details__whiteball"></div>
+          <div class="card-details__emptyball"></div>
+        </div>
+
+        <div class="card-details__number">0000 0000 0000 0000</div>
+        <div class="card-details__name-dateexp">
+          <div class="card-details__name">Vinicius Lourenço</div>
+          <div class="card-details__dateexp">00/00</div>
+        </div>
+      </div>
+
+      <div class="card-details-back">        
+        <div class="card-details-back__cvc">000</div>
+      </div>
+    </div>    
+
+    <div class="right">
+      
+      <form class="details" action="" method="post" onsubmit="return check()" novalidate>     
+
+        <label class="details__label" for="">Titular do Cartão</label>
+        <input class="details__input" type="text" name="" id="details__input-name" placeholder="Vinicius Lourenço">            
+        <div id="details__input-name-error" class="error-msg"></div> 
+    
+        <label class="details__label" for="">Número do Cartão</label>
+        <input class="details__input" type="text" name="" id="details__input-ccnumber" placeholder="0000 0000 0000 0000" maxlength="16">            
+        <div id="details__input-ccnumber-error" class="error-msg"></div>         
+
+        <div class="details__info">
+
+          <div class="details__dateexp">         
+            <label class="details__label" for="">Data de Exp. (MM/AA)</label>                                
+            <div class="details__dateexp-inputs">                   
+              <input class="details__input" type="number" name="" id="details__input-dateexp-month" placeholder="MM">
+              <div id="details__input-dateexp-month-error" class="error-msg"></div>                       
+
+              <input class="details__input" type="number" name="" id="details__input-dateexp-year" placeholder="AA">                           
+              <div id="details__input-dateexp-year-error" class="error-msg"></div>         
+            </div>
+          </div>
+          
+          <div class="details__cvc">
+            <label class="details__label" for="">CVC</label>                      
+            <input class="details__input" type="number" name="" id="" placeholder="000">                                                                               
+          </div>
+
+        </div>
+        
+        <button class="details__button">Confirmar</button>
+    
+      </form>
+    </div>
+
+
+    <!-- Completed state start -->
+
+    <!-- Thank you!
+    We've added your card details
+    Continue   -->
+
+  </main>
+
+</body>
+
+
+
+</html>
