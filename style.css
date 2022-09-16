@@ -81,7 +81,7 @@ main {
     flex-direction: row;
 }
 
-.details__dateexp-inputs input {
+.details__dateexp-inputs input, span {
     width: 40%;
     margin-right: 0.8rem;
 }
@@ -122,7 +122,7 @@ main {
     color: #ffffff;
     display: flex;
     height: 150px;
-    flex-direction: column;
+    flex-direction: column;    
     margin-bottom: 1rem;
     margin-left: -18rem;
     justify-content: flex-end;
@@ -131,33 +131,9 @@ main {
     width: 300px;
 }
 
-.card-details__balls {
-    align-items: center;
-    display: flex;
+.card-details__logo {
     height: 50%;
-    flex-direction: row;
-    justify-content: flex-start;
-    position: relative;
-    top: -12px;
     width: 100%;
-}
-
-.card-details__whiteball {
-    background-color: #ffffff;
-    border-radius: 100%;
-    height: 2rem;
-    width: 2rem;
-    content: '';
-    margin-right: 0.7rem;
-}
-
-.card-details__emptyball {
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 100%;
-    height: 1rem;
-    width: 1rem;
-    content: '';
 }
 
 .card-details__number {
@@ -186,6 +162,24 @@ main {
 .card-details-back__cvc {
     color: #ffffff;   
     position: relative;
-    top: 50%;
+    top: 49.5%;
     left: 80%;
+}
+
+.confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;    
+}
+
+.confirm__icon {
+    height: 80px;
+    width: auto;
+}
+
+.invisible {
+    position: absolute;
+    left: -9999px;
 }

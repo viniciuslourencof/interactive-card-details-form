@@ -28,6 +28,7 @@
 
 <script src="index.js"></script>
 
+
 </head>
 <body>
   <main>
@@ -36,26 +37,23 @@
     
     <div class="cards">
       <div class="card-details">
-        <div class="card-details__balls">
-          <div class="card-details__whiteball"></div>
-          <div class="card-details__emptyball"></div>
-        </div>
+        <object data="images/card-logo.svg" class="card-details__logo"> </object>        
 
-        <div class="card-details__number">0000 0000 0000 0000</div>
+        <div class="card-details__number" id="card-details__number">0000 0000 0000 0000</div>
         <div class="card-details__name-dateexp">
-          <div class="card-details__name">Vinicius Lourenço</div>
-          <div class="card-details__dateexp">00/00</div>
+          <div class="card-details__name" id="card-details__name">Vinicius Lourenço</div>
+          <div class="card-details__dateexp" id="card-details__dateexp">00/00</div>
         </div>
       </div>
 
       <div class="card-details-back">        
-        <div class="card-details-back__cvc">000</div>
+        <div class="card-details-back__cvc" id="card-details-back__cvc">000</div>
       </div>
     </div>    
 
-    <div class="right">
-      
-      <form class="details" action="" method="post" onsubmit="return check()" novalidate>     
+    <div class="right">        
+
+      <form class="details" id="details" action="" method="post" onsubmit="return false;" novalidate>     
 
         <label class="details__label" for="">Titular do Cartão</label>
         <input class="details__input" type="text" name="" id="details__input-name" placeholder="Vinicius Lourenço">            
@@ -68,34 +66,42 @@
         <div class="details__info">
 
           <div class="details__dateexp">         
-            <label class="details__label" for="">Data de Exp. (MM/AA)</label>                                
-            <div class="details__dateexp-inputs">                   
-              <input class="details__input" type="number" name="" id="details__input-dateexp-month" placeholder="MM">
-              <div id="details__input-dateexp-month-error" class="error-msg"></div>                       
+            <label class="details__label" for="">Data de Exp. (MM/AA)</label>   
 
-              <input class="details__input" type="number" name="" id="details__input-dateexp-year" placeholder="AA">                           
-              <div id="details__input-dateexp-year-error" class="error-msg"></div>         
+            <div class="details__dateexp-inputs">                   
+              <input class="details__input" type="text" name="" id="details__input-dateexp-month" placeholder="MM" maxlength="2">              
+              <input class="details__input" type="text" name="" id="details__input-dateexp-year" placeholder="AA" maxlength="2">                                                                    
             </div>
+            
+            <div class="details__dateexp-inputs">              
+              <span id="details__input-dateexp-month-error" class="error-msg"></span>                                   
+              <span id="details__input-dateexp-year-error" class="error-msg"></span>                                       
+            </div>            
+
           </div>
           
           <div class="details__cvc">
             <label class="details__label" for="">CVC</label>                      
-            <input class="details__input" type="number" name="" id="" placeholder="000">                                                                               
+            <input class="details__input" type="text" name="" id="details__input-cvc" placeholder="000" maxlength="3">                                                                               
+            <span id="details__input-cvc-error" class="error-msg"></span>                                       
           </div>
 
         </div>
         
-        <button class="details__button">Confirmar</button>
+        <button onclick="submitForm();" class="details__button">Confirmar</button>
     
       </form>
+
+      <!-- Completed state start -->
+
+      <div class="confirm invisible" id="confirm">
+        <object data="images/icon-complete.svg" class="confirm__icon"> </object>              
+        <div>Obrigado!</div>
+        <div>Você adicionou os detalhes do seu cartão</div>              
+        <button class="details__button">Continuar</button>
+      </div>
+
     </div>
-
-
-    <!-- Completed state start -->
-
-    <!-- Thank you!
-    We've added your card details
-    Continue   -->
 
   </main>
 
