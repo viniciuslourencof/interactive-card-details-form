@@ -51,9 +51,11 @@ function submitForm () {
         return valid;
     }        
 
-    function validateLength(length) {            
+    function validateLength(length) {         
+      
+      var value = field.value.replace(/\s/g, '');        
 
-      if (field.value.length < length) {
+      if ((value.length < length) || (value.length > length))  {
         formValid = false;
         valid = false;
         field.classList.add("error-input");
