@@ -22,14 +22,19 @@ main {
     font-size: 0.7rem;
 }
 
-.left {
+.invisible {
+    position: absolute;
+    left: -9999px;
+}
+
+.background-img {
     background-image: url("images/bg-main-desktop.png");
     background-size: cover;
     width: 30%;
     height: 100vh;
 }
 
-.right {
+.background-white {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,14 +177,84 @@ main {
     align-items: center;
     justify-content: center;
     width: 35%;    
+    text-align: center;    
 }
 
 .confirm__icon {
     height: 80px;
     width: auto;
+    margin-bottom: 1rem;
 }
 
-.invisible {
-    position: absolute;
-    left: -9999px;
+.confirm__title {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.confirm__text {
+    font-size: 1rem;
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 2rem;
+    
+}
+
+#details__input-cvc-error {
+    width: auto;
+}
+
+@media screen and (max-width: 480px) {       
+
+    main {
+        flex-direction: column;                        
+    }
+
+    .background-img {
+        background-image: url("images/bg-main-mobile.png");
+        background-size: cover;
+        width: 100%;
+        height: 200px;        
+    }
+
+    .background-white {
+        width: 100%;  
+        height: 50%; 
+        padding: 1rem;     
+    }    
+
+    .cards {
+        width: 100%;
+        padding: 1rem;               
+    }
+
+    .card-details, .card-details-back {
+        margin: 0;
+    }    
+
+    .card-details {         
+        position: relative;    
+        margin-top: -8rem;        
+        margin-left: -2rem;      
+    }    
+
+    .card-details-back {                
+        position: relative;
+        margin-top: -16rem;
+        margin-right: -2rem;         
+      }
+
+    .details {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 2rem;        
+    }
+
+    .confirm {
+        margin-top: 3rem;        
+        width: 100%;
+    }
+
+
+    
 }

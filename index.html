@@ -33,9 +33,10 @@
 <body>
   <main>
 
-    <div class="left"></div>
+    <div class="background-img"></div>
     
     <div class="cards">
+
       <div class="card-details">
         <object data="images/card-logo.svg" class="card-details__logo"> </object>        
 
@@ -49,18 +50,19 @@
       <div class="card-details-back">        
         <div class="card-details-back__cvc" id="card-details-back__cvc">000</div>
       </div>
+      
     </div>    
 
-    <div class="right">        
+    <div class="background-white">        
 
-      <form class="details" id="details" action="" method="post" onsubmit="return false;" novalidate>     
+      <form class="details" id="details" action="" method="post" onsubmit="return false;" autocomplete="off" novalidate>     
 
         <label class="details__label" for="">Titular do Cartão</label>
         <input class="details__input" type="text" name="" id="details__input-name" placeholder="Vinicius Lourenço">            
         <div id="details__input-name-error" class="error-msg"></div> 
     
         <label class="details__label" for="">Número do Cartão</label>
-        <input class="details__input" type="text" name="" id="details__input-ccnumber" placeholder="0000 0000 0000 0000" maxlength="16">            
+        <input class="details__input" onkeypress="mascara(this, mcc)" type="text" name="" id="details__input-ccnumber" placeholder="0000 0000 0000 0000" maxlength="19">            
         <div id="details__input-ccnumber-error" class="error-msg"></div>         
 
         <div class="details__info">
@@ -96,9 +98,9 @@
 
       <div class="confirm invisible" id="confirm">
         <object data="images/icon-complete.svg" class="confirm__icon"> </object>              
-        <div>Obrigado!</div>
-        <div>Você adicionou os detalhes do seu cartão</div>              
-        <button class="details__button">Continuar</button>
+        <div class="confirm__title" >Obrigado!</div>
+        <div class="confirm__text">Nós adicionamos os detalhes do seu cartão</div>              
+        <button class="details__button" onclick="detailsVisible()">Continuar</button>
       </div>
 
     </div>
