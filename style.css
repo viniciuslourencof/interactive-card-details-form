@@ -24,7 +24,7 @@ main {
 
 .invisible {
     position: absolute;
-    left: -9999px;
+    left: -9999px;    
 }
 
 .background-img {
@@ -169,6 +169,7 @@ main {
     position: relative;
     top: 49.5%;
     left: 80%;
+    width: min-content;
 }
 
 .confirm {
@@ -205,7 +206,7 @@ main {
 }
 
 @media screen and (max-width: 480px) {       
-
+    
     main {
         flex-direction: column;                        
     }
@@ -225,7 +226,7 @@ main {
 
     .cards {
         width: 100%;
-        padding: 1rem;               
+        padding: 1rem;             
     }
 
     .card-details, .card-details-back {
@@ -235,13 +236,15 @@ main {
     .card-details {         
         position: relative;    
         margin-top: -8rem;        
-        margin-left: -2rem;      
+        margin-left: -2rem;         
+        z-index: 1;        
     }    
 
     .card-details-back {                
         position: relative;
-        margin-top: -16rem;
-        margin-right: -2rem;         
+        margin-top: -15.1rem;
+        margin-right: -2rem;                
+        z-index: 0;        
       }
 
     .details {
