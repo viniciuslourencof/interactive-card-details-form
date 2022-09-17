@@ -62,7 +62,7 @@
         <div id="details__input-name-error" class="error-msg"></div> 
     
         <label class="details__label" for="">Número do Cartão</label>
-        <input class="details__input" onkeypress="mascara(this, mcc)" type="text" name="" id="details__input-ccnumber" placeholder="0000 0000 0000 0000" maxlength="19">            
+        <input class="details__input" onchange="mascara(this, mcc)" onloadeddata="mascara(this, mcc)" onkeypress="mascara(this, mcc)" type="text" name="" id="details__input-ccnumber" placeholder="0000 0000 0000 0000" maxlength="19">            
         <div id="details__input-ccnumber-error" class="error-msg"></div>         
 
         <div class="details__info">
