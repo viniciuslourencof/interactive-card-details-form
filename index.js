@@ -8,6 +8,7 @@ function execmascara(){
   v_obj.value=v_fun(v_obj.value)
 }
 function mcc(v){  
+
   v=v.replace(/^(\d{4})(\d)/g,"$1 $2");
   v=v.replace(/^(\d{4})\s(\d{4})(\d)/g,"$1 $2 $3");
   v=v.replace(/^(\d{4})\s(\d{4})\s(\d{4})(\d)/g,"$1 $2 $3 $4");

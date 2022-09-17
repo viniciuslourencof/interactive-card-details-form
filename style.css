@@ -205,6 +205,18 @@ main {
     width: auto;
 }
 
+.error-input {
+    border: 1px solid #b1395f;
+}
+
+.error-msg { 
+    color: #c12020;                 
+    margin-bottom: 1rem;
+    margin-top: -12px;
+    font-size: 0.6rem;
+    position: relative;
+}
+
 @media screen and (max-width: 480px) {       
     
     main {
